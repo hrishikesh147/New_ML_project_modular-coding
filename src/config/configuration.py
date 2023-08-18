@@ -1,6 +1,7 @@
 from src.constants import *
 import os,sys
 
+#Data Ingestion Paths--------------------------------------------
 ROOT_DIR=ROOt_DIR_KEY
 
 DATASET_PATH=os.path.join(ROOT_DIR,DATA_DIR,DATA_DIR_KEY)
@@ -13,3 +14,25 @@ TRAIN_FILE_PATH=os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,DATA_INGESTIOn_KEY,CURREN
 
 TEST_FILE_PATH=os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,DATA_INGESTIOn_KEY,CURRENT_TIME_STAMP,
                              DATA_INGESTION_INGESTED_DATA_DIR_KEY,TEST_DATA_DIR_KEY)
+
+## DATA TRANSFORMATION PATH---------------------------------------
+# FOR CREATING processor.pkl
+PREPROCESING_OBJ_FILE = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFORMATION_ARTIFACT, 
+                                     DATA_PREPROCCED_DIR, DATA_TRANSFORMTION_PROCESSING_OBJ)
+# FOR CREATING train.csv
+TRANSFORM_TRAIn_FILE_PATH = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFORMATION_ARTIFACT,
+                                         DATA_TRANSFORM_DIR, TRANSFORM_TRAIN_DIR_KEY)
+
+# FOR CREATING test.csv
+TRANSFORM_TEST_FILE_PATH = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFORMATION_ARTIFACT,
+                                         DATA_TRANSFORM_DIR, TRANSFORM_TEST_DIR_KEY)
+
+
+# FOR CREATING feature_engg.pkl
+FEATURE_ENGG_OBJ_FILE_PATH = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFORMATION_ARTIFACT,
+                                          DATA_PREPROCCED_DIR,' feature_engg.pkl')
+
+
+
+#MODEL Training-------------------------------------
+MODEL_FILE_PATH=os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,MODEL_TRAINER_KEY,MODEL_OBJECT)

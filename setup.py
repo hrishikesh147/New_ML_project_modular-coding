@@ -18,7 +18,7 @@ def get_requirements_list():
         if HYPHEN_E_DOT in requirement_list:
             requirement_list.remove(HYPHEN_E_DOT)
 
-        return requirement_list
+    return requirement_list
 
 setup(
     name = PROJECT_NAME,
